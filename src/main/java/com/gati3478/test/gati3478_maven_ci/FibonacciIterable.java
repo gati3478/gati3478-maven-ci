@@ -31,5 +31,11 @@ public class FibonacciIterable implements Iterable<Integer> {
 			return retValue;
 		}
 
+		@Override
+		public void remove() {
+			// TODO Auto-generated method stub
+
+		}
+
 	}
 }

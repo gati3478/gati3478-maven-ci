@@ -41,6 +41,12 @@ public class LimitIterable<T> implements Iterable<T> {
 			}
 		}
 
+		@Override
+		public void remove() {
+			// TODO Auto-generated method stub
+
+		}
+
 	}
 
 }

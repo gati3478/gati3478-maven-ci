@@ -53,6 +53,11 @@ public class ChainIterable<T> implements Iterable<T> {
 			}
 		}
 
+		@Override
+		public void remove() {
+			// TODO Auto-generated method stub
+		}
+
 	}
 
 }

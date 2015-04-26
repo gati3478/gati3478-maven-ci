@@ -64,6 +64,12 @@ public class RangeIterable implements Iterable<Integer> {
 			}
 		}
 
+		@Override
+		public void remove() {
+			// TODO Auto-generated method stub
+
+		}
+
 	}
 
 }
