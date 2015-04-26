@@ -33,8 +33,7 @@ public class FibonacciIterable implements Iterable<Integer> {
 
 		@Override
 		public void remove() {
-			// TODO Auto-generated method stub
-
+			// does not need to do anything
 		}
 
 	}
