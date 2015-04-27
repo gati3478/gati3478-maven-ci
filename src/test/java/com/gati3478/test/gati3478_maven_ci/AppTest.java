@@ -1,6 +1,7 @@
 package com.gati3478.test.gati3478_maven_ci;
 
 import java.util.Iterator;
+import static org.mockito.Mockito.*;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -88,7 +89,22 @@ public class AppTest extends TestCase {
 
 	public void testLimitIterableMock() {
 		// TODO Auto-generated method stub
+		Iterator<Integer> itMock = mock(Iterator.class);
+		when(itMock.hasNext()).thenReturn(true);
+		when(itMock.next()).thenReturn(1);
 
+		Iterable<Integer> iterableMock = mock(Iterable.class);
+		when(iterableMock.iterator()).thenReturn(itMock);
+
+		Iterable<Integer> limit = new LimitIterable<Integer>(iterableMock,
+				10000);
+		Iterator<Integer> it = limit.iterator();
+
+		for (int i = 0; i < 10000; ++i) {
+			assertEquals(true, it.hasNext());
+			assertEquals(1, it.next().intValue());
+		}
+		assertEquals(false, it.hasNext());
 	}
 
 }
